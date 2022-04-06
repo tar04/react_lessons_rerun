@@ -11,3 +11,4 @@ const Post = ({post: {userId, id, title, body}}) => {
 };
 
 export {Post};
+
