@@ -3,14 +3,7 @@
     margin: 0;
 }
 
-.users {
-    max-height: 49.6vh;
-    overflow: hidden;
-    overflow-y: auto;
-}
-
-.posts, .comments {
-    max-height: 25vh;
-    overflow: hidden;
-    overflow-y: auto;
+.allUsers{
+    display: flex;
+    height: 50vh;
 }
