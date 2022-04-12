@@ -1,12 +1,14 @@
 import React from "react";
 import {useForm} from "react-hook-form";
+import {carService} from "../../services";
 
-const CarForm = () => {
+const CarForm = ({setNewCar}) => {
 
     const {register, reset, handleSubmit} = useForm();
 
-    const submit = (data) => {
-        console.log(data);
+    const submit = async (data) => {
+        const car = await carService.create(data);
+        setNewCar(car);
     }
 
     return (
