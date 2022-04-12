@@ -1,9 +1,11 @@
-function App() {
-  return (
-    <div>
+import {CarForm} from "./components";
 
-    </div>
-  );
+function App() {
+    return (
+        <div>
+            <CarForm/>
+        </div>
+    );
 }
 
 export default App;
