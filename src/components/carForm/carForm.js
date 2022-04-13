@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi"
 
 import {carService} from "../../services";
-import {carValidator} from "../../validators/carValidator";
+import {carValidator} from "../../validators";
 
 const CarForm = ({setNewCar, carForUpdate, setCarForUpdate,setUpdatedCar}) => {
 
@@ -21,7 +21,7 @@ const CarForm = ({setNewCar, carForUpdate, setCarForUpdate,setUpdatedCar}) => {
             setValue('price', price);
             setValue('year', year);
         }
-    }, [carForUpdate])
+    }, [carForUpdate]);
 
     const submit = async (data) => {
         if (!carForUpdate) {
@@ -37,7 +37,7 @@ const CarForm = ({setNewCar, carForUpdate, setCarForUpdate,setUpdatedCar}) => {
         }
         setCarForUpdate(null);
         reset();
-    }
+    };
 
     return (
         <form onSubmit={handleSubmit(submit)}>
