@@ -1,7 +1,9 @@
 import Joi from "joi";
 
 const carValidator = Joi.object({
-    model: Joi.string().regex(/^[]/g),
+    model: Joi.string().regex(/^[a-zA-ZА-яёЁыЫіІєЄїЇ]{1,20}$/).required().messages({
+        'string.pattern.base':'You can use only letters, 1-20 symbols'
+    }),
     price:Joi.number().min(0).max(1000000).required().messages({
         'number.min':'Price cannot be lower than 0',
         'number.max':'Price must be lower than 1000000',
@@ -15,3 +17,4 @@ const carValidator = Joi.object({
 });
 
 export {carValidator}
+

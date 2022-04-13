@@ -5,11 +5,17 @@ function App() {
 
     const [newCar, setNewCar] = useState();
 
+    const [carForUpdate, setCarForUpdate] = useState(null);
+
+    const [updatedCar, setUpdatedCar] = useState(null);
+
+
     return (
         <div>
-            <CarForm setNewCar={setNewCar}/>
+            <CarForm setNewCar={setNewCar} carForUpdate={carForUpdate} setCarForUpdate={setCarForUpdate} setUpdatedCar={setUpdatedCar}/>
             <hr/>
-            <Cars newCar={newCar}/>
+            <Cars newCar={newCar} setCarForUpdate={setCarForUpdate} updatedCar={updatedCar}/>
+
         </div>
     );
 }
