@@ -1,8 +1,10 @@
 import React from "react";
 
+import "./UsersPage.css";
+
 const UsersPage = () => {
     return (
-        <div>
+        <div className={"usersPage"}>
             UsersPage
         </div>
     );

@@ -1,0 +1,18 @@
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: goldenrod;
+}
+
+.wrap a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+.wrap a:hover{
+    color: red;
+}
