@@ -1,0 +1,7 @@
+.users {
+    padding: 60px 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    min-width: 40%;
+}

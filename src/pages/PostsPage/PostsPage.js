@@ -1,11 +1,14 @@
 import React from "react";
+import {Outlet} from "react-router-dom";
 
+import {Posts} from "../../components";
 import "./PostsPage.css";
 
 const PostsPage = () => {
     return (
         <div className={"postsPage"}>
-            PostsPage
+            <Posts/>
+            <Outlet/>
         </div>
     );
 };
