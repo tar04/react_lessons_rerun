@@ -17,7 +17,9 @@ const CommentsOfPost = () => {
         <div>
             <h1 style={{color: "white", paddingTop: "20px"}}>Comments:</h1>
             {!commentsOfPost ? <h1 style={{color: "white"}}>Loading...</h1> : commentsOfPost.map(comment => <h2
-                style={{color: "white", paddingTop: "20px"}}>{comment.id}) User <i>{comment.email}</i> writes: {comment.body}</h2>)}
+                key={comment.id}
+                style={{color: "white", paddingTop: "20px"}}>{comment.id})
+                User <i>{comment.email}</i> writes: {comment.body}</h2>)}
         </div>
     );
 };

@@ -5,7 +5,7 @@ import "./HomePage.css";
 
 const HomePage = () => {
     return (
-        <div >
+        <div>
             <div className={"menu"}>
                 <NavLink to={"users"}>Users</NavLink>
                 <NavLink to={"posts"}>Posts</NavLink>

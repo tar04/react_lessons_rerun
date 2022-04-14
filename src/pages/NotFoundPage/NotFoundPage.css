@@ -1,4 +1,4 @@
-.wrap{
+.wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,12 +7,13 @@
     background-color: goldenrod;
 }
 
-.wrap a{
+.wrap a {
     text-decoration: none;
     cursor: pointer;
     font-size: 30px;
     color: white;
 }
-.wrap a:hover{
+
+.wrap a:hover {
     color: red;
 }

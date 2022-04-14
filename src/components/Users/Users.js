@@ -6,15 +6,15 @@ import "./Users.css";
 
 const Users = () => {
 
-    const [users,setUsers] = useState(null);
+    const [users, setUsers] = useState(null);
 
-    useEffect(()=>{
-        userService.getAll().then(users=>setUsers(users))
-    },[])
+    useEffect(() => {
+        userService.getAll().then(users => setUsers(users));
+    }, []);
 
     return (
         <div className={"users"}>
-            {users && users.map(user=><User key={user.id} user={user}/>)}
+            {users && users.map(user => <User key={user.id} user={user}/>)}
         </div>
     );
 };

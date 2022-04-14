@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-import "./user.css";
+import "./User.css";
 
 const User = ({user}) => {
 
@@ -10,7 +10,10 @@ const User = ({user}) => {
     return (
         <div className={"user"}>
             <div className={"userInfo"}>{id}) {name} ({username})</div>
-            <button><Link to={id.toString()} state={user}>Get details</Link></button>
+            <div className={"userButtons"}>
+                <button><Link to={id.toString()} state={user}>Get details</Link></button>
+                <button><Link to={`${id.toString()}/albums`} state={user}>Albums</Link></button>
+            </div>
         </div>
     );
 };

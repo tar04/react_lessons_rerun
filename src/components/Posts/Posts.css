@@ -1,15 +1,16 @@
-.posts{
+.posts {
     padding: 60px 25px;
     display: flex;
     flex-direction: column;
     row-gap: 35px;
     min-width: 50%;
+    max-width: 50%;
     overflow: hidden;
     overflow-y: auto;
     height: 84%;
-    float: right;
-    direction:rtl
+    direction: rtl
 }
-.posts .post{
-    direction:ltr;
+
+.posts .post {
+    direction: ltr;
 }

@@ -1,0 +1,13 @@
+.photo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 0 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.photo img {
+    width: 120px;
+}

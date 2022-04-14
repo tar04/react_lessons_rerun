@@ -11,7 +11,7 @@ const SinglePost = ({post: {id, title, body}}) => {
         <div className={"singlePost"}>
             <h2>{id}) {title}</h2>
             <h3>{body}</h3>
-            <button onClick={()=>navigate("comments")}>Get comments</button>
+            <button onClick={() => navigate("comments")}>Get comments</button>
         </div>
     );
 };

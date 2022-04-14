@@ -1,0 +1,9 @@
+.photos {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin: 40px 0;
+    height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}

@@ -11,12 +11,12 @@ const PostsOfUser = () => {
 
     useEffect(() => {
         userService.getPostsByUsersId(id).then(posts => setPostsOfUser(posts))
-    }, [id])
+    }, [id]);
 
     return (
         <div>
             <h1 style={{color: "white", paddingTop: "20px"}}>Posts:</h1>
-            {!postsOfUser ? <h1 style={{color: "white"}}>Loading...</h1> : postsOfUser.map(post => <h2
+            {!postsOfUser ? <h1 style={{color: "white"}}>Loading...</h1> : postsOfUser.map(post => <h2 key={post.id}
                 style={{color: "white", paddingTop: "20px"}}>{post.id}) {post.title}</h2>)}
         </div>
     );

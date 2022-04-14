@@ -1,0 +1,21 @@
+.album {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.album button {
+    align-self: center;
+    padding: 5px;
+    font-size: 16px;
+    background-color: red;
+    border-radius: 15px;
+}
+
+.album button a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}

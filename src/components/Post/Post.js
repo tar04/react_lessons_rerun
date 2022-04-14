@@ -5,7 +5,7 @@ import "./Post.css";
 
 const Post = ({post}) => {
 
-    const {id,title}=post;
+    const {id, title} = post;
 
     return (
         <div className={"post"}>

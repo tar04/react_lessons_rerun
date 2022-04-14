@@ -18,7 +18,7 @@ const UserDetails = () => {
         } else {
             setUSerById(user);
         }
-    }, [id])
+    }, [id]);
 
     return (
         <div>

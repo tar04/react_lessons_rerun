@@ -1,0 +1,14 @@
+.albumsAndPhotos {
+    margin: 50px auto;
+    width: 50%;
+
+}
+
+.albums {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: auto;
+}

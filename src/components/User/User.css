@@ -1,6 +1,7 @@
 .user {
     display: flex;
     justify-content: space-between;
+    column-gap: 10px;
 }
 
 .user button {
@@ -10,13 +11,18 @@
     border-radius: 15px;
 }
 
-.user button a{
+.userInfo {
+    font-size: 24px;
+    color: white;
+}
+
+.userButtons a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 
-.userInfo {
-    font-size: 26px;
-    color: white;
+.userButtons {
+    display: flex;
+    column-gap: 15px;
 }
