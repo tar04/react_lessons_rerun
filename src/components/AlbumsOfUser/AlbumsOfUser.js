@@ -13,7 +13,7 @@ const AlbumsOfUser = () => {
 
     useEffect(() => {
         userService.getAlbumsByUserId(id).then(albums => setAlbums(albums))
-    }, []);
+    }, [id]);
 
     return (
         <div className={"albumsAndPhotos"}>

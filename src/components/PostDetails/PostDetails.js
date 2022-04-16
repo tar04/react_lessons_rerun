@@ -18,7 +18,7 @@ const PostDetails = () => {
         } else {
             setPostById(post);
         }
-    }, [id]);
+    }, [id, post]);
 
     return (
         <div>
