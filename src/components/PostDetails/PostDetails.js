@@ -6,14 +6,14 @@ import {SinglePost} from "../SinglePost/SinglePost";
 
 const PostDetails = () => {
 
-    const {id} = useParams();
-
-    const [postById, setPostById] = useState(null);
-
     const {state: post} = useLocation();
 
+    const {id} = useParams();
+
+    const [postById, setPostById] = useState(post);
+
     useEffect(() => {
-        if (id) {
+        if (!post) {
             postService.getById(id).then(post => setPostById(post));
         } else {
             setPostById(post);

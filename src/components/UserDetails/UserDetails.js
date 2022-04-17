@@ -6,14 +6,14 @@ import {SingleUserDetails} from "../SingleUser/SingleUserDetails";
 
 const UserDetails = () => {
 
-    const {id} = useParams();
-
-    const [userById, setUSerById] = useState(null);
-
     const {state: user} = useLocation();
 
+    const {id} = useParams();
+
+    const [userById, setUSerById] = useState(user);
+
     useEffect(() => {
-        if (id) {
+        if (!user) {
             userService.getById(id).then(user => setUSerById(user));
         } else {
             setUSerById(user);
