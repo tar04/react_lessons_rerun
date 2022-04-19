@@ -8,7 +8,7 @@ const HomePage = () => {
         <div>
             <div className={"menu"}>
                 <NavLink to={"users"}>Users</NavLink>
-                <NavLink to={"posts"}>Posts</NavLink>
+                <NavLink to={"posts"} replace>Posts</NavLink>
             </div>
             <Outlet/>
         </div>

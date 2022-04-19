@@ -14,3 +14,23 @@
 .posts .post {
     direction: ltr;
 }
+
+.pageController {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.pageController button {
+    color: snow;
+    padding: 5px;
+    font-size: 20px;
+    background-color: red;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.pageController button:hover {
+    color: #6e0a0a;
+}
