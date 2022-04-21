@@ -2,7 +2,7 @@
     padding: 60px 25px;
     display: flex;
     flex-direction: column;
-    row-gap: 35px;
+    row-gap: 15px;
     min-width: 50%;
     max-width: 50%;
     overflow: hidden;

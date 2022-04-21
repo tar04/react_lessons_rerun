@@ -11,7 +11,6 @@ const Posts = () => {
 
     const [query, setQuery] = useSearchParams({page: '1'});
 
-
     useEffect(() => {
         postService.getAll(query.get('page'), 10).then(posts => setPosts(posts))
     }, [query]);
@@ -30,11 +29,10 @@ const Posts = () => {
 
     return (
         <div className={"posts"}>
-            <div>{posts && posts.map(post => <Post key={post.id} post={post}/>)}
-                <div className={"pageController"}>
-                    {posts && posts[posts.length-1].id!==100 && <button onClick={() => nextPage()}>Next page</button>}
-                    {query.get('page') != 1 && <button onClick={() => prevPage()}>Prev page</button>}
-                </div>
+            {posts && posts.map(post => <Post key={post.id} post={post}/>)}
+            <div className={"pageController"}>
+                {posts && posts[posts.length - 1].id !== 100 && <button onClick={() => nextPage()}>Next page</button>}
+                {query.get('page') != 1 && <button onClick={() => prevPage()}>Prev page</button>}
             </div>
         </div>
     );
