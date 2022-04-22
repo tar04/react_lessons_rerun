@@ -1,7 +1,8 @@
 import {Route, Routes} from "react-router-dom";
 
-import {HomePage, PostsPage, UsersPage, NotFoundPage} from "./pages";
+import {HomePage, PostsPage, UsersPage, NotFoundPage, LoginPage} from "./pages";
 import {AlbumsOfUser, CommentsOfPost, Photos, PostDetails, PostsOfUser, UserDetails} from "./components";
+import {RequireAuth} from "./hoc/RequireAuth";
 import "./App.css";
 
 export function App() {
@@ -9,7 +10,7 @@ export function App() {
         <div className={"main"}>
             <Routes>
                 <Route path={"/"} element={<HomePage/>}>
-                    <Route path={"users"} element={<UsersPage/>}>
+                    <Route path={"users"} element={<RequireAuth><UsersPage/></RequireAuth>}>
                         <Route path={":id"} element={<UserDetails/>}>
                             <Route path={"posts"} element={<PostsOfUser/>}/>
                         </Route>
@@ -22,6 +23,7 @@ export function App() {
                             <Route path={"comments"} element={<CommentsOfPost/>}/>
                         </Route>
                     </Route>
+                    <Route path={"/login"} element={<LoginPage/>}/>
                 </Route>
                 <Route path={"*"} element={<NotFoundPage/>}/>
             </Routes>
