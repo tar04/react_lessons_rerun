@@ -1,10 +1,9 @@
 import {useReducer} from "react";
-import {Dogs, FormForAnimals} from "./components";
-import {Cats} from "./components/Cats/Cats";
+import {Cats, Dogs, FormForAnimals} from "./components";
 
-const init = (initialState) => {
-    return {dogs: initialState, cats: initialState}
-}
+// const init = (initialState) => {
+//     return {dogs: initialState, cats: initialState}
+// }
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -21,11 +20,11 @@ const reducer = (state, action) => {
 
 function App() {
 
-    const [state, dispatch] = useReducer(reducer, {}, init);
+    const [state, dispatch] = useReducer(reducer, {dogs: [], cats: []});
 
     return (
         <div>
-            <FormForAnimals dispath={dispatch}/>
+            <FormForAnimals/>
             <hr/>
             <div>
                 <Dogs dogs={state.dogs} dispatch={dispatch}/>
