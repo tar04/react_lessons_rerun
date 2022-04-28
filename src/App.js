@@ -1,9 +1,14 @@
-function App() {
-  return (
-    <div>
+import Counter from "./components/Counter";
+import {Form, Users} from "./components";
 
-    </div>
-  );
+function App(){
+    return (
+        <div>
+            <Counter/>
+            <Form/>
+            <Users/>
+        </div>
+    );
 }
 
 export default App;
