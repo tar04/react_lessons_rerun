@@ -1,10 +1,9 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import counterReducer from "./slices/counterSlice";
-import userReducer from "./slices/userSlice";
+import animalsReducer from "./slices/animalsSlice";
+
 
 const reducers = combineReducers({
-    counter:counterReducer,
-    user:userReducer
+    animalsReducer
 });
 
 const store = configureStore({

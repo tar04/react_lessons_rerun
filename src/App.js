@@ -1,12 +1,16 @@
-import Counter from "./components/Counter";
-import {Form, Users} from "./components";
+import {CatForm, Cats, DogForm, Dogs} from "./components";
 
-function App(){
+function App() {
     return (
-        <div>
-            <Counter/>
-            <Form/>
-            <Users/>
+        <div style={{display:"flex",justifyContent:"space-evenly",width:"100%"}}>
+            <div>
+                <CatForm/>
+                <Cats/>
+            </div>
+            <div>
+                <DogForm/>
+                <Dogs/>
+            </div>
         </div>
     );
 }
