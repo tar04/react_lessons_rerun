@@ -1,0 +1,20 @@
+.car {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+}
+
+.car > div {
+    display: flex;
+    column-gap: 25px;
+}
+
+.car a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+.car a:hover {
+    color: red;
+}
