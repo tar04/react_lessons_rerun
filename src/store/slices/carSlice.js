@@ -159,13 +159,11 @@ const {reducer: carReducer, actions: {create, resetSingleCarError, deleteCar, se
 
 const carActions = {
     getAll,
-    createAsync,
-    create,
     getSingleCar,
-    resetSingleCarError,
-    deleteCarById,
-    deleteCar,
+    createAsync,
     updateCarById,
+    deleteCarById,
+    resetSingleCarError,
     setCarForUpdate
 };
 

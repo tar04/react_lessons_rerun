@@ -21,7 +21,7 @@ const Car = ({car}) => {
 
     return (
         <div className={"car"}>
-            <Link to={`cars/${id.toString()}`} state={car}>{id} -- {model} {year}</Link>
+            <Link to={`cars/${id.toString()}`} state={car}>{id} -- {model}</Link>
             <div>
                 <button onClick={deleteCar}>Delete</button>
                 <button onClick={updateCar}>Update</button>
