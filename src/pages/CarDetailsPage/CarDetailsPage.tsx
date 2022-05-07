@@ -1,17 +1,22 @@
-import React, {FC, useEffect, useState} from "react";
+import React, {FC, useEffect} from "react";
 import {useParams} from "react-router-dom";
-import {ICar} from "../../interfaces";
-import {carService} from "../../services";
+
+import {useAppDispatch, useAppSelector} from "../../hooks";
+import {carActions} from "../../store";
 
 const CarDetailsPage: FC = () => {
 
     const {id} = useParams<{ id: string }>();
 
-    const [car, setCar] = useState<ICar | null>(null);
+    const dispatch = useAppDispatch();
+
+    const {car} = useAppSelector(state => state.carReducer);
 
     useEffect(() => {
-        carService.getById(id as string).then(({data}) => setCar(data));
-    }, [id]);
+        if (id) {
+            dispatch(carActions.getById({id}));
+        }
+    }, [id, dispatch]);
 
     return (
         <div>
